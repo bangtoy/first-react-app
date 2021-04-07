@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import YoutubeComp from '../../component/YoutubeComp/YoutubeComp'
+// import YoutubeComp from '../../component/YoutubeComp/YoutubeComp'
+import Product from '../Product/Product'
 
 export default class Home extends Component {
     render() {
         return (
             <div>
-                <YoutubeComp 
+                {/* <YoutubeComp 
                     time="07:22"
                     title="Tutorial ReactJS Bag.1"
                     desc="2k ditonton, 10 Hari lalu"
@@ -25,7 +26,9 @@ export default class Home extends Component {
                     title="Tutorial ReactJS Bag.3"
                     desc="900x ditonton, 3 Hari lalu"
                  />
-                <YoutubeComp />
+                <YoutubeComp /> */}
+
+                <Product />
             </div>
         )
     }
