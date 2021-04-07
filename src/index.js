@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.css'
+import Home from './container/Home/Home';
+
 import reportWebVitals from './reportWebVitals';
-import HelloComponent from './component/HelloCoponent';
-import StateFullComponent from './container/StateFullComponent';
 
 
 ReactDOM.render(
-  <HelloComponent />,
+  <Home />,
   document.getElementById('root')
 );
 

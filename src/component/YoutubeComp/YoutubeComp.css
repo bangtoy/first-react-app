@@ -1,12 +1,9 @@
-.text-div {
-    color: aqua;
-}
-
 .youtube-wrapper {
     display: inline-block;
     width: 210px;
     box-sizing: border-box;
     margin-right: 12px;
+    background-color: rgb(230, 230, 230);
 }
 
 .img-thumb {
