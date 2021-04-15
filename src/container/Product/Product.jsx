@@ -1,22 +1,16 @@
 import React, { Component , Fragment} from 'react'
+import CardProduct from '../CardProduct/CardProduct'
 import './Product.css'
 
-export default class product extends Component {
+export default class Product extends Component {
     state = {
         order: 0
     }
 
-    handlePlus = () => {
+    handleCounterChange = (newValue) =>{
         this.setState({
-            order: this.state.order + 1
+            order: newValue
         })
-    }
-    handleMinus = () => {
-        if(this.state.order > 0)
-        this.setState({
-            order: this.state.order - 1
-        })
-   
     }
 
     render() {
@@ -31,19 +25,7 @@ export default class product extends Component {
                         <div className="count">{this.state.order}</div>
                     </div>
                 </div>
-
-                <div className="card">
-                    <div className="img-thumb-prod">
-                        <img src="https://etanee-images.s3-ap-southeast-1.amazonaws.com/sayur/Lodeh.jpg" alt=""/>
-                    </div>
-                    <p className="product-title">Paket Sayur Lodeh</p>
-                    <p className="product-price">Rp 10,000</p>
-                    <div className="counter">
-                        <button className="minus" onClick={this.handleMinus}>-</button>
-                        <input type="text" value={this.state.order}/>
-                        <button className="plus" onClick={this.handlePlus}>+</button>
-                    </div>
-                </div>
+                <CardProduct onCounterChange={(value) => this.handleCounterChange(value)}/>
             </Fragment>
         )
     }
